@@ -15,7 +15,7 @@ def eval_retriever(refs, preds, hits_at_k):
         dont_print = False
         for r, p in zip(refs, preds):
             if hits_at_k[-1] > len(p['retrieved_qas']):
-                print(f'Skipping hits@{K} eval as {K} is larger than number of retrieved results')
+                print(f'Skipping hits@{k} eval as {k} is larger than number of retrieved results')
                 dont_print = True
             ref_answers = r['answer']
             em = any([
